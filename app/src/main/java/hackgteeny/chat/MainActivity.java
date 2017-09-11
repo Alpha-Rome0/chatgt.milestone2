@@ -28,7 +28,7 @@ public class MainActivity extends Activity {
         final ListView listView1 = (ListView) findViewById(R.id.listView1);
         final EditText editText1 = (EditText) findViewById(R.id.editText1);
         final ArrayList<String> chatLines = new ArrayList<>();
-        final ArrayAdapter<String> listAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, chatLines);
+        final ArrayAdapter<String> listAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, chatLines);
         listView1.setAdapter(listAdapter);
         Button button = (Button) findViewById(R.id.button1);
 
@@ -54,7 +54,6 @@ public class MainActivity extends Activity {
                 if(arr!=null){
                     listAdapter.clear();
                     for(String s:arr)listAdapter.add(s);
-                    listAdapter.notifyDataSetChanged();
                     listView1.setSelection(listAdapter.getCount() - 1);
                 }
             }
