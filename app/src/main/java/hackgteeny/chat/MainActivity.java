@@ -11,7 +11,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 public class MainActivity extends Activity {
-    ArrayList<String> chatLines = new ArrayList<>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +19,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         final ListView listView1 = (ListView) findViewById(R.id.listView1);
         final EditText editText1=(EditText) findViewById(R.id.editText1);
+        ArrayList<String> chatLines = new ArrayList<>();
         final ArrayAdapter<String> listAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, chatLines);
         listView1.setAdapter(listAdapter);
         listAdapter.add("hello");
