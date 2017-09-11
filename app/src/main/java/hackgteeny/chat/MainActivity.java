@@ -22,8 +22,6 @@ public class MainActivity extends Activity {
         ArrayList<String> chatLines = new ArrayList<>();
         final ArrayAdapter<String> listAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, chatLines);
         listView1.setAdapter(listAdapter);
-        listAdapter.add("hello");
-        chatLines.add("world");
         Button button= (Button) findViewById(R.id.button1);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
